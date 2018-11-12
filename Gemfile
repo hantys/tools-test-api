@@ -27,7 +27,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
+
+# https://medium.com/@sushildamdhere/how-to-document-rest-apis-with-swagger-and-ruby-on-rails-ae4e13177f5d
 gem 'rswag'
+
+# https://github.com/rails-api/active_model_serializers/tree/0-10-stable/docs
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   gem 'bullet'
