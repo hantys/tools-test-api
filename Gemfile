@@ -16,8 +16,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
-# https://medium.com/@sushildamdhere/how-to-document-rest-apis-with-swagger-and-ruby-on-rails-ae4e13177f5d
-gem 'rswag'
 
 # https://github.com/rails-api/active_model_serializers/tree/0-10-stable/docs
 gem 'active_model_serializers', '~> 0.10.0'
@@ -26,6 +24,9 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'devise'
+
+# https://github.com/domaindrivendev/rswag
+gem 'rswag'
 
 group :development do
   gem 'pry-rails'
@@ -42,12 +43,12 @@ group :development, :test do
   gem 'factory_bot_rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'shoulda'
+  gem 'shoulda-matchers'
 end
 
 group :test do
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
   gem 'faker'
 end
 

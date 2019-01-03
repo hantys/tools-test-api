@@ -37,13 +37,23 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
   end
 
-  config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
-      example.run
-    end
+  config.before(:each) do
+    DatabaseCleaner.start
   end
 
-  config.include FactoryGirl::Syntax::Methods
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
+  # config.around(:each) do |example|
+  #   DatabaseCleaner.cleaning do
+  #     example.run
+  #   end
+  # end
+
+  config.backtrace_inclusion_patterns = [%r{app|spec}]
+
+  config.include FactoryBot::Syntax::Methods
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
