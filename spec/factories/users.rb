@@ -1,7 +1,8 @@
 FactoryBot.define do
   factory :user do
-    email {'pedro.fausto@hotmail.com'}
-    password {'12345678'}
-    password_confirmation {'12345678'}
+    email {Faker::Internet.email}
+    password {Faker::Internet.password}
+    password_confirmation {password}
+    # auth_token {Devise.friendly_token}
   end
 end

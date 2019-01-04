@@ -14,10 +14,10 @@ describe 'Users API', type: :request, capture_examples: true do
       response(200, description: 'Return the selected user') do
         schema type: :object,
           properties: {
-            id: { type: :integer, 'x-nullable': true  },
-            email: { type: :string, 'x-nullable': true  },
-            password: { type: :string, 'x-nullable': true  },
-            password_confirmation: { type: :string, 'x-nullable': true  }
+            id: { type: :integer  },
+            email: { type: :string  },
+            password: { type: :string  },
+            password_confirmation: { type: :string  }
           },
           required: [ 'id', 'email', 'password', 'password_confirmation' ]
         let(:user_1) do
