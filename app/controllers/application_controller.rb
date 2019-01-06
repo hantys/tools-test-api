@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include(Authenticable)
   before_action :ensure_json_request
   
   def ensure_json_request
