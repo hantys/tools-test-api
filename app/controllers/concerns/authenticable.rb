@@ -4,7 +4,7 @@ module Authenticable
   end
 
   def authenticate_with_token!
-    render json: { errors: "Acesso não permitido" }, status: 401 unless current_user.present?
+    render json: { errors: "Acesso não permitido" }, status: 401
   end
 
 end
