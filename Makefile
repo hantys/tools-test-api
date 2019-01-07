@@ -5,7 +5,7 @@ run:
 # 	foreman start -f Procfile.dev
 docs-api:
 	rake rswag:specs:swaggerize
-	
+
 install:
 	bundle install
 
