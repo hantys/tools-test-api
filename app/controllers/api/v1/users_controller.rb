@@ -3,10 +3,10 @@ class Api::V1::UsersController < ApplicationController
 
   respond_to :json
 
-  def index
-    users = User.order(id: :desc)
-    render json: users, status: 200
-  end
+  # def index
+  #   users = User.order(id: :desc)
+  #   render json: users, status: 200
+  # end
 
   def show
     begin
